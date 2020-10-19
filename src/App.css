@@ -1,48 +1,35 @@
 @import "~antd/dist/antd.css";
 
-.App {
+.bg-white {
+  background: white;
+}
+
+.bg-purple {
+  background: purple;
+}
+
+.app {
   height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-Header {
+  padding: 0px;
+  height: fit-content;
+  line-height: 22px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-sider {
+  padding: 5px 20px 0px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board-header {
+  height: 30px;
+  line-height: 22px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* App styles */
 
 .taskCard-container {
-  /* min-height: 200px; */
   background-color: #fff;
   width: 300px;
   border-radius: 16px;
@@ -68,8 +55,20 @@
   margin: 0px !important;
 }
 
+.pt-5 {
+  padding-top: 5px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
 .ml-10 {
   margin-left: 10px;
+}
+
+.ml-20 {
+  margin-left: 20px;
 }
 
 .mr-10 {
@@ -115,4 +114,12 @@
 
 .h-100 {
   height: 100%;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.br-16 {
+  border-radius: 16px;
 }

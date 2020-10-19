@@ -11,9 +11,9 @@ import {
 import { Row, Col } from "antd";
 
 const SubHeaderItem = ({ icon, title }) => (
-  <div style={{ marginLeft: 20 }}>
+  <div className="ml-20">
     {icon}
-    <span style={{ marginLeft: 5 }}>{title}</span>
+    <span className="ml-5">{title}</span>
   </div>
 );
 

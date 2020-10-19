@@ -12,6 +12,7 @@ import AppTabs from "./ components/AppTabs";
 import SubHeaderContent from "./ components/SubHeaderContent";
 import TaskCard from "./ components/TaskCard";
 import TaskDetails from "./ components/TaskDetails";
+import Placeholder from "./ components/PlaceHolder";
 import initialData from "./data/initial-data";
 
 const { Header, Content, Sider } = Layout;
@@ -19,7 +20,8 @@ const { Title } = Typography;
 
 const App = () => {
   const [showBoard, setShowBoard] = useState(true);
-  const [boardData, setBoardData] = useState(initialData);
+  const boardData = initialData;
+  // const [boardData, setBoardData] = useState(initialData);
   const [activeTaskId, setActiveTaskId] = useState();
 
   const changeTab = (activeKey) => {
@@ -36,29 +38,19 @@ const App = () => {
   const tasks = boardData.tasks;
 
   return (
-    <div className="App">
-      <Layout style={{ height: "100%" }}>
-        <Header
-          style={{
-            padding: 0,
-            background: "white",
-            height: "fit-content",
-            lineHeight: "22px",
-          }}
-        >
+    <div className="app">
+      <Layout className="h-100">
+        <Header className="app-Header bg-white">
           <Layout>
-            <Sider
-              width="fit-content"
-              style={{ background: "white ", padding: "5px 20px 0px 20px" }}
-            >
+            <Sider className="bg-white app-sider" width="fit-content">
               <Avatar
-                style={{ background: "purple", borderRadius: 16 }}
+                className="bg-purple br-16"
                 shape="square"
                 icon={<UserOutlined />}
                 size={64}
               />
             </Sider>
-            <Content style={{ background: "white", height: "100%" }}>
+            <Content className="bg-white h-100 pt-5">
               <Content>
                 <Title level={3} style={{ marginBottom: 0 }}>
                   {boardData.projectName}
@@ -69,17 +61,9 @@ const App = () => {
           </Layout>
           <Divider style={{ margin: 0 }} />
         </Header>
-        {showBoard && (
+        {showBoard ? (
           <Layout>
-            <Header
-              style={{
-                background: "white",
-                height: 30,
-                lineHeight: "22px",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
+            <Header className="bg-white board-header">
               <SubHeaderContent />
             </Header>
             <Content className="container-background">
@@ -138,6 +122,8 @@ const App = () => {
               </Row>
             </Content>
           </Layout>
+        ) : (
+          <Placeholder />
         )}
       </Layout>
     </div>

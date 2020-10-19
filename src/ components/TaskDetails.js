@@ -67,15 +67,11 @@ const TaskDetailsHeader = ({ onClose, toggleMenu }) => {
         Mark Complete
       </Button>
       <Row align="middle">
-        <SnippetsOutlined style={{ fontSize: 20 }} className="mr-20" />
-        <TagOutlined style={{ fontSize: 20 }} className="mr-20" />
-        <LikeOutlined style={{ fontSize: 20 }} className="mr-20" />
-        <EllipsisOutlined
-          style={{ fontSize: 20 }}
-          onClick={toggleMenu}
-          className="mr-20"
-        />
-        <VerticalLeftOutlined onClick={onClose} style={{ fontSize: 20 }} />
+        <SnippetsOutlined className="mr-20 font-20" />
+        <TagOutlined className="mr-20 font-20" />
+        <LikeOutlined className="mr-20 font-20" />
+        <EllipsisOutlined onClick={toggleMenu} className="mr-20 font-20" />
+        <VerticalLeftOutlined onClick={onClose} className="font-20" />
       </Row>
     </Row>
   );

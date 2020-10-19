@@ -12,57 +12,53 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+## Understanding Code
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `index.js`
 
-### `yarn build`
+This is the starting point of the application.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `data/initial-data.js`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This contains the initial data of the application. This is structured in a way it is easier to add drag and drop functionality later.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `app.js`
 
-### `yarn eject`
+This component contains the layout of the application and the other sub-components that come along with it.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `components/AppTabs.js`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This components contains the list of tabs that are shown in the application. Only the board tab shows the UI. Clicking on any other tab would show a placeholder `This feature is coming soon`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `components/Placeholder.js`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This components contains the placeholder for the tabs which are not developed.
 
-## Learn More
+### `components/SettingsMenu.js`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This component is used to show the menu inside the drawer component which opens up when you click on a particular task
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `components/SubHeaderContent.js`
 
-### Code Splitting
+This is a static component which appears just below the main header and contains various fields like `Send Feedback`, `Filter`, `Sort`. Please note that none of these features are developed.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### `components/Tag.js`
 
-### Analyzing the Bundle Size
+This component is used to generate chips for status and priority.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### `components/TaskCard.js`
 
-### Making a Progressive Web App
+This component is a single unit of tasks in the home page. The component expands/contracts based on the content provided.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### `components/TaskDetails.js`
 
-### Advanced Configuration
+This is the drawer component that opens up when you click on a particular task card in the home page
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### `components/TaskTable.js`
 
-### Deployment
+This is the component that is shown inside `TaskDetails` (drawer component). The data of this component is driven by the card
+selected in the home page.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### `App.css`
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Contains the styles for the application
