@@ -1,2 +1,1 @@
-# asana-ant
-Building couple of screens using ant
+Please use the master branch
