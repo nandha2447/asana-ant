@@ -31,9 +31,7 @@ const SubTask = ({ name, dueDate }) => (
         <Text strong type="danger" className="mr-10">
           {dueDate}
         </Text>
-        <Avatar style={{ backgroundColor: "purple", marginRight: 20 }}>
-          SY
-        </Avatar>
+        <Avatar className="bg-purple mr-20">SY</Avatar>
         <WechatOutlined style={{ fontSize: 24 }} />
       </Row>
     </Row>

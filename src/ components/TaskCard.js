@@ -4,6 +4,7 @@ import { CheckCircleOutlined } from "@ant-design/icons";
 import { StatusTag, PriorityTag } from "./Tag";
 
 const TaskCard = ({
+  isDragging,
   onClick,
   id,
   title,
@@ -13,7 +14,11 @@ const TaskCard = ({
   avatarImg,
   dueDate,
 }) => (
-  <div className="taskCard-container" onClick={() => onClick(id)}>
+  <div
+    className="taskCard-container"
+    style={{ backgroundColor: isDragging ? "lightgreen" : "white" }}
+    onClick={() => onClick(id)}
+  >
     <div>{img}</div>
     <div>
       <CheckCircleOutlined className="mr-10" />

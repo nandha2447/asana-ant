@@ -18,7 +18,7 @@ const SubHeaderItem = ({ icon, title }) => (
 );
 
 const SubHeaderContent = () => (
-  <Row justify="space-between" style={{ width: "100%" }}>
+  <Row justify="space-between" className="w-100">
     <Col>Created on Sep 1</Col>
     <Col>
       <Row>

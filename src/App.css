@@ -8,6 +8,10 @@
   background: purple;
 }
 
+.bg-orange {
+  background: orange;
+}
+
 .app {
   height: 100vh;
 }
@@ -37,12 +41,48 @@
   margin-bottom: 20px;
 }
 
+.taskTable-container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.calendar-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: red;
+}
+
 .add-task-button {
   min-width: 300px;
 }
 
 .container-background {
   padding: 30px 20px 0;
+}
+
+.column-icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-menu {
+  margin: 0px;
+  position: absolute;
+  top: 64px;
+  right: 60px;
+  z-index: 10;
+  width: 300px;
+  border: 1px solid lightgrey;
+}
+
+.divider {
+  margin: 4px 0px;
 }
 
 .bg-white {
@@ -85,6 +125,10 @@
 
 .mt-20 {
   margin-top: 20px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .mb-10 {

@@ -34,17 +34,7 @@ const SettingsMenuItem = ({ icon, name, shortcut, rightIcon }) => {
 
 export const SettingsMenu = () => {
   return (
-    <Menu
-      style={{
-        margin: 0,
-        position: "absolute",
-        top: 64,
-        right: 60,
-        border: "1px solid lightgrey",
-        zIndex: 10,
-        width: 300,
-      }}
-    >
+    <Menu className="settings-menu">
       <Menu.Item className="zero-margin">
         <SettingsMenuItem
           icon={<FullscreenOutlined />}
@@ -82,7 +72,7 @@ export const SettingsMenu = () => {
           shortcut="Tab T"
         />
       </Menu.Item>
-      <Divider style={{ margin: "4px 0px" }} />
+      <Divider className="divider" />
       <Menu.Item className="zero-margin">
         <SettingsMenuItem name="Duplicate task" />
       </Menu.Item>
@@ -98,7 +88,7 @@ export const SettingsMenu = () => {
           rightIcon={<RightOutlined />}
         />
       </Menu.Item>
-      <Divider style={{ margin: "4px 0px" }} />
+      <Divider className="divider" />
       <Menu.Item className="zero-margin">
         <SettingsMenuItem name="Delete task" shortcut="Tab Bksp" />
       </Menu.Item>

@@ -5,9 +5,7 @@ import Typography from "antd/es/typography";
 const { Content } = Layout;
 const { Title } = Typography;
 const PlaceHolder = () => (
-  <Content
-    style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-  >
+  <Content className="flex-center">
     <Title>This feature is coming soon</Title>
   </Content>
 );

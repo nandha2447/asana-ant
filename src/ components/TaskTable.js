@@ -10,13 +10,13 @@ const { Text } = Typography;
 export const TaskTable = ({ task, projectName }) => {
   const { title, status, priority, dueDate, avatarImg } = task;
   return (
-    <div className="mb-40" style={{ paddingLeft: 24, paddingRight: 24 }}>
+    <div className="taskTable-container mb-40">
       <Layout className="my-10">
         <Sider className="bg-white">
           <Text type="secondary">Assignee</Text>
         </Sider>
         <Content className="bg-white">
-          <Avatar style={{ background: "orange" }}>{avatarImg}</Avatar>
+          <Avatar className="bg-orange">{avatarImg}</Avatar>
         </Content>
       </Layout>
       <Layout className="my-10">
@@ -24,9 +24,7 @@ export const TaskTable = ({ task, projectName }) => {
           <Text type="secondary">Due date</Text>
         </Sider>
         <Content className="bg-white d-flex">
-          <CalendarOutlined
-            style={{ fontSize: 20, marginRight: 10, color: "red" }}
-          />
+          <CalendarOutlined className="calendar-icon" />
           <Text strong type="danger">
             {dueDate}
           </Text>
