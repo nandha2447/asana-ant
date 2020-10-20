@@ -71,6 +71,25 @@
   justify-content: center;
 }
 
+.gradient-button,
+.gradient-button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(7, 0, 36, 1) 20%,
+    rgba(121, 9, 91, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: white;
+  border-radius: 10px;
+}
+
+.header-settings {
+  width: auto;
+  max-width: auto;
+  min-width: auto;
+  flex: 0 0 auto;
+}
+
 .settings-menu {
   margin: 0px;
   position: absolute;

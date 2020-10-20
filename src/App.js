@@ -15,13 +15,13 @@ import TaskCard from "./ components/TaskCard";
 import TaskDetails from "./ components/TaskDetails";
 import Placeholder from "./ components/PlaceHolder";
 import initialData from "./data/initial-data";
+import HeaderSettings from "./ components/HeaderSettings";
 
 const { Header, Content, Sider } = Layout;
 const { Title } = Typography;
 
 const App = () => {
   const [showBoard, setShowBoard] = useState(true);
-  // const boardData = initialData;
   const [boardData, setBoardData] = useState(initialData);
   const [activeTaskId, setActiveTaskId] = useState();
 
@@ -105,13 +105,18 @@ const App = () => {
               />
             </Sider>
             <Content className="bg-white h-100 pt-5">
-              <Content>
+              <Content
+                style={{ display: "flex", justifyContent: "space-between" }}
+              >
                 <Title level={3} style={{ marginBottom: 0 }}>
                   {boardData.projectName}
                 </Title>
               </Content>
               <AppTabs onChange={changeTab} />
             </Content>
+            <Sider className="bg-white" width="auto">
+              <HeaderSettings />
+            </Sider>
           </Layout>
           <Divider className="zero-margin" />
         </Header>
@@ -134,10 +139,9 @@ const App = () => {
                 <Row>
                   {columns.map((col) => {
                     return (
-                      <Droppable droppableId={col.title}>
+                      <Droppable droppableId={col.title} key={col.title}>
                         {(provided) => (
                           <div
-                            key={col.title}
                             className="mr-20"
                             ref={provided.innerRef}
                             {...provided.droppableProps}

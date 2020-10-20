@@ -59,6 +59,10 @@ This is the drawer component that opens up when you click on a particular task c
 This is the component that is shown inside `TaskDetails` (drawer component). The data of this component is driven by the card
 selected in the home page.
 
+### `components/HeaderSettings.js`
+
+This is the component that is shown inside the header on the right hand side. This is a static component
+
 ### `App.css`
 
 Contains the styles for the application
